@@ -67,12 +67,12 @@ end)
 
 function PAM_EXTENSION:OnRTVVoterAdded(ply)
 	local players_needed = math.ceil((rtv_percentage_setting and rtv_percentage_setting:GetActiveValue() or 0) * player.GetCount())
-	chat.AddText(col_prefix, "[PAM] ", col_bright, ply:GetName(), col_darker, " wants to rock the vote! (", col_bright, tostring(rtv_voter_count or "0"), col_darker, "/", col_bright , tostring(players_needed), col_darker, ")")
+	chat.AddText(col_prefix, "[PAM] ", ply, col_darker, " wants to rock the vote! (", col_bright, tostring(rtv_voter_count or "0"), col_darker, "/", col_bright , tostring(players_needed), col_darker, ")")
 end
 
 function PAM_EXTENSION:OnRTVVoterRemoved(ply)
 	local players_needed = math.ceil((rtv_percentage_setting and rtv_percentage_setting:GetActiveValue() or 0) * player.GetCount())
-	chat.AddText(col_prefix, "[PAM] ", col_bright, ply:GetName(), col_darker, " no longer wants to rock the vote! (", col_bright, tostring(rtv_voter_count or "0"), col_darker , "/", col_bright , tostring(players_needed), col_darker, ")")
+	chat.AddText(col_prefix, "[PAM] ", ply, col_darker, " no longer wants to rock the vote! (", col_bright, tostring(rtv_voter_count or "0"), col_darker , "/", col_bright , tostring(players_needed), col_darker, ")")
 end
 
 function PAM_EXTENSION:Initialize()
