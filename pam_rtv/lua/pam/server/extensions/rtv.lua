@@ -16,6 +16,9 @@ local delayed_setting = setting_namespace:AddSetting("delayed", pacoman.TYPE_BOO
 local percentage_setting = setting_namespace:AddSetting("percentage", pacoman.TYPE_PERCENTAGE, 0.6, "The percentage of players needed for a vote to start.")
 local enabled_setting
 
+PAM_EXTENSION.delayed_setting = delayed_setting
+PAM_EXTENSION.percentage_setting = percentage_setting
+
 -- stores the players wanting to rock the vote
 local rtv_voters = {}
 local rtv_voter_count = 0

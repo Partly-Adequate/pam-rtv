@@ -15,6 +15,8 @@ local enabled_setting
 local rtv_enabled_setting
 local rtv_percentage_setting
 
+PAM_EXTENSION.commands_setting = commands_setting
+
 hook.Add("PacomanPostServerStateReceived", "rtv_chat_commands", function()
 	local namespace = pacoman.server_settings:GetChild("pam")
 	if not namespace then return end
