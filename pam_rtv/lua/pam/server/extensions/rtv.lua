@@ -67,7 +67,7 @@ end
 
 -- reset players that want to rock the vote
 local function ResetRTVVoters()
-	rtv_voters = {_setting}
+	rtv_voters = {}
 	rtv_voter_count = 0
 
 	net.Start("PAM_ResetRTV")
